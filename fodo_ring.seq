@@ -1,0 +1,120 @@
+quadrupoleLength=5;
+dipoleLength=15;
+cellLength=100;
+nBend=40;
+
+kf=2.8/cellLength/quadrupoleLength;
+kd = -kf;
+
+myAngle=2*pi/nBend;
+QF: quadrupole, L=quadrupoleLength, K1=kf;
+QD: quadrupole, L=quadrupoleLength, K1=kd;
+BM: sbend, L=dipoleLength, angle:=myAngle; 
+
+myCell1:sequence, refer=entry, L=cellLength;
+q11: QF, at=0;
+B11: BM, at =10;
+B12: BM, at =30;
+q12: QD, at=50;
+B13: BM, at =60;
+B14: BM, at =80;
+endsequence;
+
+myCell2:sequence, refer=entry, L=cellLength;
+q21: QF, at=0;
+B21: BM, at =10;
+B22: BM, at =30;
+q22: QD, at=50;
+B23: BM, at =60;
+B24: BM, at =80;
+endsequence;
+
+myCell3:sequence, refer=entry, L=cellLength;
+q31: QF, at=0;
+B31: BM, at =10;
+B32: BM, at =30;
+q32: QD, at=50;
+B33: BM, at =60;
+B34: BM, at =80;
+endsequence;
+
+myCell4:sequence, refer=entry, L=cellLength;
+q41: QF, at=0;
+B41: BM, at =10;
+B42: BM, at =30;
+q42: QD, at=50;
+B43: BM, at =60;
+B44: BM, at =80;
+endsequence;
+
+myCell5:sequence, refer=entry, L=cellLength;
+q51: QF, at=0;
+B51: BM, at =10;
+B52: BM, at =30;
+q52: QD, at=50;
+B53: BM, at =60;
+B54: BM, at =80;
+endsequence;
+
+
+myCell6:sequence, refer=entry, L=cellLength;
+q61: QF, at=0;
+B61: BM, at =10;
+B62: BM, at =30;
+q62: QD, at=50;
+B63: BM, at =60;
+B64: BM, at =80;
+endsequence;
+
+
+myCell7:sequence, refer=entry, L=cellLength;
+q71: QF, at=0;
+B71: BM, at =10;
+B72: BM, at =30;
+q72: QD, at=50;
+B73: BM, at =60;
+B74: BM, at =80;
+endsequence;
+
+
+myCell8:sequence, refer=entry, L=cellLength;
+q81: QF, at=0;
+B81: BM, at =10;
+B82: BM, at =30;
+q82: QD, at=50;
+B83: BM, at =60;
+B84: BM, at =80;
+endsequence;
+
+
+myCell9:sequence, refer=entry, L=cellLength;
+q91: QF, at=0;
+B91: BM, at =10;
+B92: BM, at =30;
+q92: QD, at=50;
+B93: BM, at =60;
+B94: BM, at =80;
+endsequence;
+
+myCell0:sequence, refer=entry, L=cellLength;
+q01: QF, at=0;
+B01: BM, at =10;
+B02: BM, at =30;
+q02: QD, at=50;
+B03: BM, at =60;
+B04: BM, at =80;
+endsequence;
+
+
+FODO_ring:sequence, refer=entry, L=1000;
+ myCell0, at = 0;
+ myCell1, at = 100;
+ myCell2, at = 200;
+ myCell3, at = 300;
+ myCell4, at = 400;
+ myCell5, at = 500;
+ myCell6, at = 600;
+ myCell7, at = 700;
+ myCell8, at = 800;
+ myCell9, at = 900;
+endsequence;
